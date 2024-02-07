@@ -1,0 +1,22 @@
+<%- include("partials/header.ejs") %>
+
+
+<body>
+    <ul>
+        <% for (let i = 0; i < texts.length; i++) { %>
+            <li>
+                <form action = "/delete" method ="type">
+                    <%= texts[i]; %>
+                    <button type="submit" name="selected"> Delete </button>
+                </form>
+            </li>
+        <% } %>
+    </ul>
+
+    <form action = "/submit" method = "post">
+        <label>Insert new blog: </label>
+        <input type="text" id="text" name="text" required>
+        <button type="submit">Submit</button>
+
+    </form>
+</body>
