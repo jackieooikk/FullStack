@@ -5,7 +5,7 @@
     <ul>
         <% for (let i = 0; i < texts.length; i++) { %>
             <li>
-                <form action = "/delete" method ="type">
+                <form action = "/delete/" method ="post">
                     <%= texts[i]; %>
                     <button type="submit" name="selected"> Delete </button>
                 </form>
